@@ -33,12 +33,15 @@ class VehicleManager extends VehicleBase implements VehicleActions
             $this->writeFile(array_values($vehicles));
         }
     }
-     public function getVehicles()
+    public function getVehicles()
     {
-        
+        if (!file_exists($this->fileName)) {
+            file_put_contents($this->fileName, json_encode([]));
+        }
+        return json_decode(file_get_contents($this->fileName), true);
     }
-    public function getDetails()
-    {
-        
-    }
+
+
+
+    public function getDetails() {}
 }

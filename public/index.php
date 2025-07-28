@@ -1,14 +1,14 @@
 <?php
-require_once __DIR__ . '/app/classes/VehicleManager.php';
+require_once __DIR__ . '/../app/classes/VehicleManager.php';
 $vehicleManager = new VehicleManager("", "", "", "");
 $vehicles = $vehicleManager->getVehicles() ?? [];
 
-include __DIR__ . '/public/views/header.php';
+include __DIR__ . '/views/header.php';
 ?>
 
 <div class="container my-4">
     <h1>Vehicle Listing</h1>
-    <a href="./../public/views/add.php" class="btn btn-success mb-4">Add Vehicle</a>
+    <a href="./views/add.php" class="btn btn-success mb-4">Add Vehicle</a>
     <div class="row">
         <?php foreach ($vehicles as $id => $vehicle): ?>
             <div class="col-md-4 mb-3">
@@ -19,18 +19,15 @@ include __DIR__ . '/public/views/header.php';
                         <p class="card-text">Type: <?= $vehicle['type'] ?></p>
                         <p class="card-text">Price: $<?= $vehicle['price'] ?></p>
                         <div class="btn-group">
-                            <a href="./views/details.php?id=<?= $id ?>" class="btn btn-secondary">View</a>
-                            <a href="./views/edit.php?id=<?= $id ?>" class="btn btn-primary">Edit</a>
-                            <a href="./views/delete.php?id=<?= $id ?>" class="btn btn-danger">Delete</a>
+                            <a href="views/details.php?id=<?= $id ?>" class="btn btn-secondary">View</a>
+                            <a href="views/edit.php?id=<?= $id ?>" class="btn btn-primary">Edit</a>
+                            <a href="views/delete.php?id=<?= $id ?>" class="btn btn-danger">Delete</a>
                         </div>
                     </div>
                 </div>
             </div>
         <?php endforeach; ?>
     </div>
-</div>
-<!-- Loop ends here -->
-</div>
 </div>
 
 </body>
