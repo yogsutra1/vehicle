@@ -18,6 +18,9 @@ class VehicleManager extends VehicleBase implements VehicleActions
 
     public function editVehicle($id, $data)
     {
+
+        // var_dump($data);
+        //exit;
         $vehicles = $this->readFile();
         if (isset($vehicles[$id])) {
             $vehicles[$id] = $data;

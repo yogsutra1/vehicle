@@ -4,6 +4,8 @@ require_once "../../app/classes/VehicleManager.php";
 $vehicleManager = new VehicleManager("", "", "", "");
 
 $id = $_GET['id'] ?? null;
+//var_dump($id);
+//exit;
 
 if ($id === null) {
     header("Location: ../index.php");
@@ -13,18 +15,20 @@ if ($id === null) {
 $vehicles = $vehicleManager->getVehicles();
 
 $vehicle = $vehicles[$id] ?? null;
+//var_dump($vehicle);
+//exit;
 
 if (!$vehicle) {
     header("Location: ../index.php");
     exit;
 }
 
-// Process form submission
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $data = $_POST;
 
     $vehicleManager->editVehicle($id, [
-        'id' => $data['id'],       // ensure the id from hidden input is passed
+        'id' => $data['id'],
         'name' => $data['name'],
         'type' => $data['type'],
         'price' => $data['price'],
@@ -35,7 +39,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     exit;
 }
 
-// Include header (contains <html>, <head>, <body> etc.)
 include './header.php';
 ?>
 
