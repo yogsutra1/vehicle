@@ -45,7 +45,7 @@ include './header.php';
 <div class="container my-4">
     <h1>Edit Vehicle</h1>
     <form method="POST">
-        <!-- Hidden input for vehicle id -->
+
         <input type="hidden" name="id" value="<?= htmlspecialchars($id) ?>">
 
         <div class="mb-3">
