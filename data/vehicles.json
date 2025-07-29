@@ -1,12 +1,5 @@
 [
     {
-        "id": "1",
-        "name": "Bidesh Kumar",
-        "type": "Track",
-        "price": "555",
-        "image": "https:\/\/toyota.com.bd\/cmsimages\/H9cU7sJHUpEq4bxNhlulqPPXX48=\/2442\/fill-680x381-c0%7Cformat-avif\/Brand_New_Toyota_Dyna_Thumbnail_exp2_Navana_Limited.png"
-    },
-    {
         "name": "Toyta",
         "type": "Car",
         "price": "7000000",
@@ -18,5 +11,17 @@
         "type": "Micro",
         "price": "2000000",
         "image": "https:\/\/toyota.com.bd\/cmsimages\/_YT-iXQB8Q5ITXLUJw6V8BislGQ=\/2447\/fill-680x381-c0%7Cformat-avif\/Brand_New_Toyota_Hiace_Ambulance_Thumbnail_exp2_Navana_Limited_2.png"
+    },
+    {
+        "name": "BMW",
+        "type": "Edition X5 SUV",
+        "price": "50000000",
+        "image": "https:\/\/www.bmwusa.com\/content\/dam\/bmw\/common\/limited-edition\/x5-anniversary\/BMW-SOC25-X5Silver-LimitedEdition-all-v2.jpg.bmwimg.xlarge.jpg"
+    },
+    {
+        "name": "Maroti",
+        "type": "Car",
+        "price": "5000",
+        "image": "https:\/\/www.yogsutra.com\/images_all_post\/1700939257.webp"
     }
 ]

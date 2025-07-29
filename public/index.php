@@ -1,7 +1,9 @@
 <?php
 require_once __DIR__ . '/../app/classes/VehicleManager.php';
 $vehicleManager = new VehicleManager("", "", "", "");
-$vehicles = $vehicleManager->getVehicles() ?? [];
+$vehicles = $vehicleManager->getVehicles();
+//var_dump($vehicles);
+//exit;
 
 include __DIR__ . '/views/header.php';
 ?>

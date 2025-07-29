@@ -35,10 +35,7 @@ class VehicleManager extends VehicleBase implements VehicleActions
     }
     public function getVehicles()
     {
-        if (!file_exists($this->fileName)) {
-            file_put_contents($this->fileName, json_encode([]));
-        }
-        return json_decode(file_get_contents($this->fileName), true);
+        return $this->readFile();
     }
 
 
